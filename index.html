@@ -9,13 +9,19 @@
 </head>
 <body>
     <h1>Coding Quiz</h1>
-    <p>This quiz will test your might of coding!(insert more directions here)</p>
-    <button id="start-quiz">Start the Quiz</button>
-    <form id="quiz-form">
-
-
-    </form>
-    <script src="script.js"></script>
+    <div id="starting-quiz">
+        <p id="directions">This quiz will test your might of coding!(insert more directions here)</p>
+        
+        <button id="start-quiz">Start the Quiz</button>
+    </div>
+    <h3>Time: <span id="timer"></span></h3>
+    <div id="quiz-area">
+        <h2 id="question"></h2>
+        <div id="response"></div>
+    </div>
+    
     <script src="questions.js"></script>
+    <script src="script.js"></script>
+   
 </body>
 </html>
