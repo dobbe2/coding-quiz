@@ -11,6 +11,7 @@ startButton.addEventListener("click", function(){
     event.preventDefault();
     showQuestions();
     let myInterval = setInterval(function(){
+        
         // decrement the timer 
         timer--;
         // show the timer on the DOM
@@ -19,7 +20,6 @@ startButton.addEventListener("click", function(){
         // verify if timer < 0 then if yes finish
         if (timer <= 0){
             clearInterval(myInterval);
-            // document.querySelector("#timer").textContent = ""
             //show result form
             results()
            
@@ -52,10 +52,11 @@ function verify(){
         // correct
         correctAnswer++
         score = score + 10
-        let timeout = setTimeout(function(){
-           document.querySelector("#correct").innerHTML = "Correct!"
+        // debugger
+        // let timeout = setTimeout(function(){
+        //    document.querySelector("#correct").innerHTML = "Correct!"
 
-        }, 100);
+        // }, 100);
         
         
     }else{
@@ -69,11 +70,12 @@ function verify(){
 
         currentQuestion++
         if(currentQuestion === questions.length){
+            
             //show Results, the end
             score = score + timer
-           
-            results ()
-            clearInterval(myInterval)
+            timer = 0
+            // results ()
+            // clearInterval(myInterval)
         }
         else{
             showQuestions()
@@ -83,10 +85,20 @@ function verify(){
 function results(){
     document.querySelector("h3").innerHTML = "Final Score";
     document.querySelector("#quiz-area").innerHTML = score;
+    let highscore = document.createElement("button");
+    document.body.appendChild(highscore);
+    highscore.class="choice"
+    highscore.innerHTML = "Submit High Score";
     // document.querySelector("#highscore").textContent = score;
-    // document.querySelector("#highscore")
-    playerInitials = prompt("What is your initials?");
-    console.log(playerInitials)
+    highscore.addEventListener("click", function(){
+        playerInitials = prompt("What is your initials?");
+         
+         window.localStorage.setItem(playerInitials, score);
+         console.log(playerInitials, score)
+    })
+
+    // playerInitials = prompt("What is your initials?");
+   
 }
 //show results
 //save score into local storage

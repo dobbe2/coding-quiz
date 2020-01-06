@@ -7,7 +7,7 @@ h1 {
     text-align: center;
 }
 
-#response {
+#response, #quiz-area, h3 {
     text-align: center;
 }
 
