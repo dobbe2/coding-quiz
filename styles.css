@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#starting-quiz {
+    text-align: center;
+}
+
+#response {
+    text-align: center;
+}
+
+#question{
+    text-align: center;
+}
+button{
+    width: 240px;
+    height: 50px;
+    color: white;
+    background-color: dodgerblue;
+    border-radius: 28px;
+    align-items: center;
+}
+/*working on button colors*/
+/* button {
+    width: 100px;
+    height: 30px;
+    color: white;
+    background-color: dodgerblue;
+} */
