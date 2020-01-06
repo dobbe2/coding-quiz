@@ -52,6 +52,8 @@ function verify(){
         // correct
         correctAnswer++
         score = score + 10
+        let audio = new Audio("assets/correct.mp3");
+        audio.play();
         // debugger
         // let timeout = setTimeout(function(){
         //    document.querySelector("#correct").innerHTML = "Correct!"
@@ -63,6 +65,8 @@ function verify(){
         //incorrect
         incorrectAnswer++
         timer = timer - 15
+        let audio = new Audio("assets/incorrect.mp3");
+        audio.play();
     }
     console.log(correctAnswer, incorrectAnswer);
 
@@ -87,15 +91,17 @@ function results(){
     document.querySelector("#quiz-area").innerHTML = score;
     let highscore = document.createElement("button");
     document.body.appendChild(highscore);
-    highscore.class="choice"
+    highscore.id="choice"
     highscore.innerHTML = "Submit High Score";
     // document.querySelector("#highscore").textContent = score;
     highscore.addEventListener("click", function(){
         playerInitials = prompt("What is your initials?");
-         
          window.localStorage.setItem(playerInitials, score);
          console.log(playerInitials, score)
+
     })
+
+
 
     // playerInitials = prompt("What is your initials?");
    
