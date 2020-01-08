@@ -1,11 +1,11 @@
-#container {
-    border: firebrick;
-    border-width: 10px;
+* {
+    background-color: #d6e0ef;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h1 {
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #starting-quiz {
@@ -14,11 +14,15 @@ h1 {
 
 #response, #quiz-area, h3 {
     text-align: center;
+    margin-top: 20px;
 }
 
 #question{
     text-align: center;
+    font-size: x-large;
+    margin-bottom: 20px;
 }
+
 button{
     width: 240px;
     height: 50px;
@@ -27,10 +31,14 @@ button{
     border-radius: 28px;
     align-items: center;
 }
-/*working on button colors*/
-/* button {
-    width: 100px;
-    height: 30px;
-    color: white;
-    background-color: dodgerblue;
-} */
+
+#quiz-area {
+    margin-bottom: 25px;
+}
+
+#highscore-list {
+    font-size: x-large;
+    border: black;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
